@@ -40,13 +40,13 @@ iso: kernel
 	mkdir -p $(BUILD)/iso/boot/grub
 	cp $(BUILD)/kyronos.kernel $(BUILD)/iso/boot/kyronos.kernel
 	cp boot/grub.cfg $(BUILD)/iso/boot/grub/grub.cfg
-	$(GRUB_MKRESCUE) -o $(BUILD)/kyronos-alpha1.iso $(BUILD)/iso
+	$(GRUB_MKRESCUE) -o $(BUILD)/kyronos.iso $(BUILD)/iso
 
 run: iso
-	qemu-system-x86_64 -display gtk -cdrom $(BUILD)/kyronos-alpha1.iso
+	qemu-system-x86_64 -display gtk -cdrom $(BUILD)/kyronos.iso
 
 debug: iso
-	qemu-system-x86_64 -cdrom $(BUILD)/kyronos-alpha1.iso -S -s
+	qemu-system-x86_64 -cdrom $(BUILD)/kyronos.iso -S -s
 
 test:
 	$(MAKE) -C tests

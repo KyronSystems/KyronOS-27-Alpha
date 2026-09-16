@@ -1,6 +1,6 @@
 # Roadmap
 
-## Alpha 1
+## KyronOS
 
 - [x] Project structure and build pipeline
 - [x] Multiboot2 kernel bootstrap

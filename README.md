@@ -1,4 +1,4 @@
-# KyronOS 27 Alpha 1
+# KyronOS
 
 KyronOS is a small, text-only experimental operating system for x86 PCs. It boots from a GRUB Multiboot2 ISO and provides a VGA terminal with a shell, keyboard input, directory navigation, users, and a RAM-backed filesystem prototype.
 
@@ -37,7 +37,7 @@ make iso
 make run
 ```
 
-The generated image is `build/kyronos-alpha1.iso`. For debugging, run `make debug`, then connect with:
+The generated image is `build/kyronos.iso`. For debugging, run `make debug`, then connect with:
 
 ```sh
 gdb build/kyronos.kernel
@@ -77,6 +77,6 @@ User home directories live under `/home`. Inside the active user's home, the pro
 
 Implemented foundations include the Multiboot2 boot image, VGA console with scrolling and cursor tracking, PS/2 keyboard input with Shift and Tab completion, shell navigation, user home-directory handling, KSFS superblock validation, and a generic block-device interface.
 
-The Alpha 1 prototype does not yet provide native EHCI/xHCI controller transport, USB HID device enumeration, persistent disk drivers, a complete on-disk KSFS file tree, or a graphical environment. USB boot-protocol decoding is present, but native USB keyboard support requires the controller and interrupt-transfer layers.
+KyronOS does not yet provide native EHCI/xHCI controller transport, USB HID device enumeration, persistent disk drivers, a complete on-disk KSFS file tree, or a graphical environment. USB boot-protocol decoding is present, but native USB keyboard support requires the controller and interrupt-transfer layers.
 
-See [docs/BUILDING.md](docs/BUILDING.md), [docs/KSFS.md](docs/KSFS.md), [docs/USB.md](docs/USB.md), and [docs/ROADMAP.md](docs/ROADMAP.md) for details.
+See [docs/BUILDING.md](docs/BUILDING.md), [docs/WINDOWS.md](docs/WINDOWS.md), [docs/KSFS.md](docs/KSFS.md), [docs/USB.md](docs/USB.md), and [docs/ROADMAP.md](docs/ROADMAP.md) for details.
